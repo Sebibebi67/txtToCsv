@@ -3,7 +3,7 @@
 
 //--------------------------------- Description ----------------------------------//
 //
-// This file contains all methods to translate a CSV file into a COBOL Copy
+// This file contains all methods to converter a formatted txt file into a clean csv
 //
 //--------------------------------------------------------------------------------//
 
@@ -43,7 +43,7 @@ actualBtn.addEventListener('change', function(){
 })
 
 /**
-* Description : Generates the COBOL Copy with the given file
+* Description : Generates the csv File
 *
 * Input :
 * - None
@@ -68,6 +68,19 @@ function generateCSV() {
 	this.readFile(txtFile);
 }
 
+
+/**
+ * Description : Reads the input file
+ *
+ * Input :
+ * - file : the html element which contains the given file
+ *
+ * Output :
+ * - None
+ *
+ * Authors :
+ * - Sébastien HERT
+ */
 function readFile(file){
 	var reader = new FileReader();
 	
@@ -137,6 +150,18 @@ function readFile(file){
 	
 }
 
+/**
+ * Description : Generates and donwloads the csv file
+ *
+ * Input :
+ * - None
+ *
+ * Output :
+ * - None
+ *
+ * Authors :
+ * - Sébastien HERT
+ */
 function download() {
 	console.log(csvLines);
 
